@@ -1,0 +1,16 @@
+textbook
+
+int requestCode = 0;
+int flags = 0;
+// Start an Activity
+Intent startActivityIntent = new Intent(this, MyOtherActivity.class);
+PendingIntent.getActivity(this, requestCode,
+startActivityIntent, flags);
+// Start a Service
+Intent startServiceIntent = new Intent(this, MyService.class);
+PendingIntent.getService(this, requestCode,
+startServiceIntent , flags);
+// Broadcast an Intent
+Intent broadcastIntent = new Intent(NEW_LIFEFORM_DETECTED);
+PendingIntent.getBroadcast(this, requestCode,
+broadcastIntent, flags);
